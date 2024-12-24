@@ -2,6 +2,8 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
+import authRouter from "./routes/auth";
+import userRouter from "./routes/user";
 
 dotenv.config();
 
@@ -34,3 +36,6 @@ app.get("/", (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server is running at ${url}:${port}`);
 });
+
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/users", userRouter);
