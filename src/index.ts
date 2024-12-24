@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import authRouter from "./routes/auth";
 import userRouter from "./routes/user";
+import objectRouter from "./routes/object";
 
 dotenv.config();
 
@@ -39,3 +40,4 @@ app.listen(port, () => {
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/objects", objectRouter);

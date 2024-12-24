@@ -4,6 +4,7 @@
 ### [0.0.2] - 2024-12-24
 
 ### Added
+- Ajout de la gestion des objets
 - Ajout de la connexion utilisateur
 - Ajout de la gestion des utilisateurs
 
