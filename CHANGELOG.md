@@ -1,12 +1,18 @@
 ## Tous les changements notables apportés à ce projet seront documentés dans ce dossier.
 
 
-### [0.0.2] - 2024-12-24
+### [0.0.2] - 2024-12-24 - 2024-12-25
 
 ### Added
-- Ajout de la gestion des objets
-- Ajout de la connexion utilisateur
-- Ajout de la gestion des utilisateurs
+- La gestion des objets
+- La connexion utilisateur
+- La gestion des utilisateurs
+
+### Changed
+- Noms des routes de connexion/inscription
+
+### Fixed
+- Payload trop large
 
 
 ### [0.0.1] - 2024-12-24

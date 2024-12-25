@@ -2,7 +2,7 @@ import * as express from "express";
 import User from "../models/User";
 import bcrypt from "bcrypt";
 
-export const login = async (req: express.Request, res: express.Response) => {
+export const signin = async (req: express.Request, res: express.Response) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
@@ -16,7 +16,9 @@ export const login = async (req: express.Request, res: express.Response) => {
       return res.status(401).json({ message: "Identifiant ou mot de passe invalide" });
     }
     
-    res.status(200).json({ message: "Connexion reussie" });
+    const authenticatedUser = { ...user.toObject(), password: undefined };
+
+    res.status(200).json({authenticatedUser, message: "Connexion reussie" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Erreur interne du serveur" });
